@@ -75,9 +75,11 @@ function handleSubmit(){
     const savedUser=localStorage.getItem('regUser');
     const savedPass=localStorage.getItem('regPass');
     if(user===savedUser && pass===savedPass){
-      localStorage.setItem('isLoggedIn','true');
-      alert('✅ Welcome back! Logging you in...');
-      window.location.href='index.html';
+    localStorage.setItem('isLoggedIn','true');
+
+    alert('✅ Welcome back! Logging you in...');
+
+    window.location.href='home.html';
     } else err.textContent='❌ Invalid username or account not found';
   } else {
     const confirmPass=document.getElementById('confirmPassword').value;
